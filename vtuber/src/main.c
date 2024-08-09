@@ -1,7 +1,12 @@
-#include <stdio.h>
+#include "Window.h"
 
 int main()
 {
-    printf("Hello World!");
+    WindowInit();
+
+    while (WindowUpdate());
+    
+    WindowDeinit();
+
     return 0;
 }

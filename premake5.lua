@@ -28,7 +28,7 @@ newoption
         { "opengles2", "OpenGLES 2.0"},
         { "opengles3", "OpenGLES 3.0"}
     },
-    default = "opengl33"
+    default = "opengles2"
 }
 
 function string.starts(String,Start)
@@ -95,7 +95,7 @@ workspace (workspaceName)
 
     targetdir "bin/%{cfg.buildcfg}/"
 
-    if(os.isdir("game")) then
+    if(os.isdir("vtuber")) then
         startproject(workspaceName)
     end
 
@@ -105,8 +105,8 @@ check_raylib();
 
 include ("raylib_premake5.lua")
 
-if(os.isdir("game")) then
-    include ("game")
+if(os.isdir("vtuber")) then
+    include ("vtuber")
 end
 
 folders = os.matchdirs("*")
