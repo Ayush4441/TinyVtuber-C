@@ -3,5 +3,6 @@
 
 void InitStream();
 void DrawStream();
+void DeinitStream();
 
 #endif

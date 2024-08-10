@@ -9,6 +9,7 @@ int CurrentMode = STREAM_MODE;
 void Avatar_Init()
 {
     SetupVocal();
+    InitStream();
 }
 
 void Avatar_GUI_Draw()
@@ -32,4 +33,5 @@ void Avatar_SwitchToMode(int Mode)
 void Avatar_Deinit()
 {
     DeinitVocal();
+    DeinitStream();
 }

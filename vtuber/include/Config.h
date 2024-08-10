@@ -6,4 +6,6 @@
 #define WINDOW_HEIGHT 768
 #define WINDOW_TITLE "TINY VTUBER"
 
+#define TARGET_FPS  60
+
 #endif
