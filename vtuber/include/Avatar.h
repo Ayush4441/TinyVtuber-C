@@ -7,7 +7,9 @@ typedef enum
     STREAM_MODE
 }Mode;
 
+void Avatar_Init();
 void Avatar_GUI_Draw();
-void Avatar_SwitchGUI(int Mode);
+void Avatar_SwitchToMode(int Mode);
+void Avatar_Deinit();
 
 #endif

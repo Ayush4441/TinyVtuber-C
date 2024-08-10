@@ -9,6 +9,8 @@ bool ShouldShutdown = false;
 void WindowInit()
 {
     InitWindow(WINDOW_WIDTH, WINDOW_HEIGHT, WINDOW_TITLE);
+
+    Avatar_Init();
 }
 
 void ShutDown()
@@ -29,5 +31,7 @@ bool WindowUpdate()
 
 void WindowDeinit()
 {
+    Avatar_Deinit();
+
     CloseWindow();
 }
