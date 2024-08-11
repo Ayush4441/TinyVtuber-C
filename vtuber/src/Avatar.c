@@ -14,7 +14,6 @@ Avatar_State CurrentState;
 
 Timer Blink_Timer, BlinkTimeOut_Timer;
 
-float Avatar_Scale = 0.5;
 Vector2 Avatar_OriginalPos;
 
 bool ShouldOpenEyes = true;

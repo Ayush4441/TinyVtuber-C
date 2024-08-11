@@ -10,6 +10,10 @@ void CheckForFocus();
 
 void WindowInit()
 {
+    SetTraceLogLevel(LOG_ALL);
+
+    // LoadSettings();  TODO, FIX LOADING SETTINGS
+
     SetConfigFlags(FLAG_WINDOW_TRANSPARENT);
 
     InitWindow(Window_Width, Window_Height, WindowTitle);
@@ -45,9 +49,13 @@ bool WindowUpdate()
 
 void WindowDeinit()
 {
+    Window_Deactive();
+
     Avatar_Deinit();
 
     CloseWindow();
+
+    // SaveSettings();  TODO, FIX SAVING SETTINGS
 }
 
 void Window_Active()

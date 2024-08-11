@@ -12,7 +12,11 @@ extern float Vocal_Threshold;
 extern Color BG_Color_OnFocus, BG_Color_OnUnFocus;
 
 extern Vector2 Avatar_Size, Avatar_Center;
+extern float Avatar_Scale;
 
 extern bool SmallWindow;
+
+void SaveSettings();
+void LoadSettings();
 
 #endif
