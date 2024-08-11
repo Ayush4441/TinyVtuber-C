@@ -2,6 +2,7 @@
 #define UTIL_H
 
 #include <stdbool.h>
+#include "raylib.h"
 
 typedef struct 
 {
@@ -19,4 +20,6 @@ bool TimerDone(Timer *timer);
 //  Get Timer's Elapsed Time
 double GetElapsed(Timer *timer);
 
+bool IsVector2InRect(Vector2 point, Rectangle rect);
+bool IsVector2InBound(Vector2 point, Vector2 bound, int width, int height);
 #endif

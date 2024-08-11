@@ -8,8 +8,14 @@
 		"**/*.o": true,
 		// "**/*.exe": true,
 	},
-	"C_Cpp.errorSquiggles": "disabled",
+	"C_Cpp.errorSquiggles": "enabled",
+	"C_Cpp.default.compilerPath": "C:\\msys64\\mingw64\\bin\\gcc.exe",
 	"files.associations": {
-		"stream.h": "c"
+		"lz4.h": "c",
+		"window.h": "c",
+		"raymath.h": "c",
+		"*.m": "c",
+		"util.h": "c",
+		"raylib.h": "c"
 	}
 }

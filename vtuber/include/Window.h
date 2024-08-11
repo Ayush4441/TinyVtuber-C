@@ -3,6 +3,8 @@
 
 #include <stdbool.h>
 
+extern bool IsFocused;
+
 //Init Window
 void WindowInit();
 
@@ -14,5 +16,9 @@ bool WindowUpdate();
 
 //Deinit Window
 void WindowDeinit();
+
+void Window_Active();
+
+void Window_Deactive();
 
 #endif

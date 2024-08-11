@@ -36,8 +36,8 @@ project (workspaceName)
 
     vpaths 
     {
-        ["Header Files/*"] = { "include/**.h",  "include/**.hpp", "src/**.h", "src/**.hpp", "**.h", "**.hpp"},
-        ["Source Files/*"] = {"src/**.c", "src/**.cpp","**.c", "**.cpp"},
+        ["Header Files/*"] = { "include/**.h", "lib/**.h", "include/**.hpp", "src/**.h", "src/**.hpp", "**.h", "**.hpp"},
+        ["Source Files/*"] = {"src/**.c", "lib/**.c", "src/**.cpp","**.c", "**.cpp"},
     }
     files {"**.c", "**.cpp", "**.h", "**.hpp"}
 

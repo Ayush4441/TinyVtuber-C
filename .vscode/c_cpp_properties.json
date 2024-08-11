@@ -4,7 +4,8 @@
             "name": "Win32",
             "includePath": [
                 "${workspaceFolder}/raylib-master/src/",
-                "${workspaceFolder}/vtuber/include/**"
+                "${workspaceFolder}/vtuber/include/**",
+                "${workspaceFolder}/vtuber/lib"
             ],
             "defines": [
                 "_DEBUG",

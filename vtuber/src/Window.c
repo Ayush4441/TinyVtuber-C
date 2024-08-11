@@ -1,14 +1,24 @@
 #include "Window.h"
-#include "Config.h"
+#include "Settings.h"
 #include "Avatar.h"
 
 #include "raylib.h"
 
-bool ShouldShutdown = false;
+bool ShouldShutdown = false, IsFocused, hasChangedFocus = false;
+
+void CheckForFocus();
 
 void WindowInit()
 {
-    InitWindow(WINDOW_WIDTH, WINDOW_HEIGHT, WINDOW_TITLE);
+    SetConfigFlags(FLAG_WINDOW_TRANSPARENT);
+
+    InitWindow(Window_Width, Window_Height, WindowTitle);
+
+    SetWindowState(FLAG_WINDOW_TOPMOST);
+
+    SetWindowFocused();
+
+    SetTargetFPS(TargetFPS);
 
     Avatar_Init();
 }
@@ -20,9 +30,13 @@ void ShutDown()
 
 bool WindowUpdate()
 {
+        CheckForFocus();
+
+        Avatar_Update();
+
     BeginDrawing();
 
-    Avatar_GUI_Draw();
+        Avatar_Draw();
 
     EndDrawing();
 
@@ -34,4 +48,24 @@ void WindowDeinit()
     Avatar_Deinit();
 
     CloseWindow();
+}
+
+void Window_Active()
+{
+    ClearWindowState(FLAG_WINDOW_UNDECORATED);
+    ClearWindowState(FLAG_WINDOW_MOUSE_PASSTHROUGH);
+}
+
+void Window_Deactive()
+{
+    SetWindowState(FLAG_WINDOW_UNDECORATED);
+    SetWindowState(FLAG_WINDOW_MOUSE_PASSTHROUGH);   
+}
+
+void CheckForFocus()
+{
+    if(IsWindowFocused())
+        Window_Active();
+    else
+        Window_Deactive();
 }

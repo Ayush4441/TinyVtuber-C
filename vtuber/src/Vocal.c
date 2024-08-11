@@ -1,11 +1,10 @@
 #include "Vocal.h"
 #include "MiniAudio\miniaudio.h"
-
+#include "Settings.h"
 #include <stdio.h>
 
-#define MINIAUDIO_IMPLEMENTATION 1
+#define MINIAUDIO_IMPLEMENTATION
 
-float Vocal_Threshold = 0.5f;
 int Current_Vocal_State = DIDNOT_REACHED_TH;
 
 ma_context context;
